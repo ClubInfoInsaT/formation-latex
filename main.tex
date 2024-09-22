@@ -1,0 +1,59 @@
+\documentclass[10pt]{article}
+\input{preambule}
+
+\title{titre du document}
+\author{auteur}
+\date{\today}
+
+
+\rhead{entete 2}
+\lhead{entete 1}
+
+% R : right, L : Left, C: center || \thepage pour le numéro de page, sinon un texte ou une image
+\fancyfoot[C]{\thepage} 
+
+
+\begin{document}
+    \maketitle
+    \tableofcontents % table des matières
+    \newpage % saut de page
+    
+    \section{Une première section}
+    
+        \textbf{ceci est un texte en gras}
+    
+        \begin{warningbox}
+            attention ceci est pas bien
+        \end{warningbox}
+
+        \begin{cadre}{FFC63D}
+            ceci est un théorème en jaune $\forall (x,y,z,w) \in \R \times \C \times \K \times \N$
+        \end{cadre}
+
+        \begin{cadre}{00FF00}
+            ceci est un autre théorème en vert $\displaystyle \int_\R x^2 dx$
+        \end{cadre}
+    
+    \section{Une seconde section}
+    
+    \subsection{Une sous section}
+    
+    Une énumération :
+    \begin{enumerate}
+        \item voila
+        \item bof
+    \end{enumerate}
+    \vspace{2em}
+    Une liste :
+    \begin{itemize}
+        \item voila
+        \item bof
+    \end{itemize}
+    
+    \subsection{Une seconde sous section}
+
+    et on commence à écrire du texte \\
+    \textbf{ceci est un texte en gras}\\
+    \textit{Ceci est en italique}\\
+    \underline{ceci est souligné}
+\end{document}

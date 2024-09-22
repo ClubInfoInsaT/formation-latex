@@ -1,0 +1,39 @@
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\fontshape{n}
+\pagestyle{empty}
+\usepackage[left=4cm,right=4cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{amsmath, amsfonts, fancyhdr, graphicx, float, hyperref, xcolor, framed, dsfont, latexsym , upgreek , datetime , xcolor , caption, listings , hyperref }
+\usepackage[newfloat]{minted}
+
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\footskip}{32.05098pt}
+
+\newenvironment{cadre}[1]{%
+    \definecolor{bord}{HTML}{#1}
+    \colorlet{fond}{bord!20}
+    \def\FrameCommand{{\color{bord}\vrule width 3pt}\colorbox{fond}}
+    \MakeFramed {\advance\hsize-\width \FrameRestore}
+    \noindent
+}{\endMakeFramed}
+
+\usepackage[most]{tcolorbox}
+\usepackage{fontawesome5} % Pour l'icône d'attention
+
+% Définir l'environnement warning
+\newtcolorbox{warningbox}{
+  colback=white, % Couleur de fond
+  colframe=red!80, % Couleur de la bordure
+  fonttitle=\bfseries, % Style du titre
+  title=\faExclamationTriangle\hspace{0.5em}Attention !, % Titre de la boîte
+  enhanced, % Permet l'utilisation de tcolorbox avec \newtcolorbox
+  attach boxed title to top left={yshift=-2mm, xshift=3mm}, % Position du titre
+  boxed title style={colback=red, sharp corners}, % Style du titre de la boîte
+}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\K}{\mathbb{K}}
